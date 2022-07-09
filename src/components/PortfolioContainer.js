@@ -1,6 +1,12 @@
-import React from "react";
-import Nav from "./Nav.js";
+import React, { useState } from "react";
+import Nav from "./Nav";
+// import About from "./pages/About";
 
 export default function PortfolioContainer() {
-  return <Nav />;
+  const [currentPage, setCurrentPage] = useState("About");
+  return (
+    <div>
+      <Nav />
+    </div>
+  );
 }
