@@ -9,7 +9,11 @@ export default function Nav({ currentPage, handlePageChange }) {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={navStyle}>
-      <a className="navbar-brand ms-3 fs-2" href="#Home">
+      <a
+        className="navbar-brand ms-3 fs-2"
+        href="#Home"
+        onClick={() => handlePageChange("Home")}
+      >
         Alyssa Natividad
       </a>
       <button

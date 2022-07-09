@@ -10,6 +10,7 @@ export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState("Home");
 
   const renderPage = () => {
+    console.log(currentPage);
     switch (currentPage) {
       case "About":
         return <About />;

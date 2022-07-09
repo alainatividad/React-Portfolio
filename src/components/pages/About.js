@@ -1,17 +1,28 @@
 import React from "react";
+import img from "../../img/alyssa.JPG";
 
 export default function About() {
   return (
     <div className="container mt-5">
-      <h1>About Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
+      <div className="row justify-content-around py-5">
+        <div className="col col-sm-12 col-md-6 col-lg-5">
+          <div className="text-center">
+            <img
+              src={img}
+              className="rounded img-fluid img-thumbnail w-auto"
+              alt="portfolio owner"
+            ></img>
+          </div>
+        </div>
+        <div className="col col-sm-12 col-md-6 col-lg-5 align-self-center">
+          <p className="fs-3">
+            An accomplished and fluent communicator with strong investigation,
+            problem-solving and decision-making skills enhanced by previous
+            application support and development roles. Excited to transition
+            into a new career as a full-stack web developer.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
