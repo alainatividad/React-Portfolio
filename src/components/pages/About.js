@@ -3,7 +3,7 @@ import img from "../../img/alyssa.JPG";
 
 export default function About() {
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 animate__animated animate__fadeIn">
       <div className="row justify-content-around py-5">
         <div className="col col-sm-12 col-md-6 col-lg-5">
           <div className="text-center">
