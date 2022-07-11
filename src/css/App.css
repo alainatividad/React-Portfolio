@@ -10,5 +10,5 @@ body, html {
     font-family: 'Arima', cursive;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color:#f0efeb;
+    /* margin: auto; */
 }

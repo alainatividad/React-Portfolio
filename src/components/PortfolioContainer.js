@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "animate.css";
 import Nav from "./Nav";
+import Footer from "./Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
@@ -29,9 +30,10 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
+    <div className="cover-container d-flex w-100 h-100 flex-column">
       <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
-      {renderPage()};
+      {renderPage()}
+      <Footer />
     </div>
   );
 }
