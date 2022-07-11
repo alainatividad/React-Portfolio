@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "animate.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import About from "./pages/About";

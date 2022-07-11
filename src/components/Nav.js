@@ -1,15 +1,8 @@
 import React from "react";
 
 export default function Nav({ currentPage, handlePageChange }) {
-  // const navStyle = {
-  //   padding: "20px 10px",
-  //   backgroundImage:
-  //     "linear-gradient(50deg,#0D1B2A,#1B263B,#415A77,#778DA9,#E0E1DD)",
-  // };
-
   return (
-    // <nav className="navbar navbar-light" style={navStyle}>
-    <nav className="navbar navbar-expand-md navbar-dark">
+    <nav className="navbar navbar-expand-md navbar-dark py-3">
       <a
         className="navbar-brand ms-3 fs-2 text-light"
         href="#Home"
