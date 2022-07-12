@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto py-3 row d-flex justify-content-center">
+    <footer className="mt-auto py-3 row justify-content-center">
       <a
+        className="col-auto"
         href="https://www.github.com/alainatividad"
         target="_blank"
         rel="norefferer"
-        className="col-1 align-self-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ export default function Footer() {
         </svg>
       </a>
       <a
-        className="col-1 align-self-center"
+        className="col-auto"
         href="https://www.linkedin.com/in/alyssa-natividad"
         rel="norefferer"
         target="_blank"
