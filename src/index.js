@@ -1,14 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle";
+import ReactDOM from "react-dom/client";
+import PortfolioContainer from "./components/PortfolioContainer";
 import "animate.css";
 import "./css/App.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <PortfolioContainer />
   </React.StrictMode>
 );
