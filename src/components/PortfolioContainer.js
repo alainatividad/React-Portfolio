@@ -6,19 +6,20 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
 import Home from "./pages/Home";
+import projects from "../projects";
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState("Home");
 
   const renderPage = () => {
-    console.log(currentPage);
+    // console.log(currentPage);
     switch (currentPage) {
       case "About":
         return <About />;
       case "Contact":
         return <Contact />;
       case "Portfolio":
-        return <Portfolio />;
+        return <Portfolio projects={projects} />;
       case "Resume":
         return <Resume />;
       default:
