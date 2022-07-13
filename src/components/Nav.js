@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Nav({ currentPage, handlePageChange }) {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark py-3">
+    <nav className="navbar navbar-expand-lg navbar-dark py-3">
       <a
         className="navbar-brand ms-3 fs-2 text-light"
         href="#Home"
