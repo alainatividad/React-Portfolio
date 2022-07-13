@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/React-Portfolio/static/css/main.6d08f3fc.css",
+    "main.js": "/React-Portfolio/static/js/main.d0a44f11.js",
+    "static/media/pexels-ellie-burgin-12250753.jpg": "/React-Portfolio/static/media/pexels-ellie-burgin-12250753.f18015c1367676ad7cea.jpg",
+    "static/media/pexels-ellie-burgin-12700791.jpg": "/React-Portfolio/static/media/pexels-ellie-burgin-12700791.51f5926e9ec65dea39b0.jpg",
+    "static/media/pexels-ellie-burgin-12700792.jpg": "/React-Portfolio/static/media/pexels-ellie-burgin-12700792.903e85855d445d37b84d.jpg",
+    "static/media/pexels-ellie-burgin-12651051.jpg": "/React-Portfolio/static/media/pexels-ellie-burgin-12651051.e762d4553956a2f759e4.jpg",
+    "static/media/pexels-ellie-burgin-12250749.jpg": "/React-Portfolio/static/media/pexels-ellie-burgin-12250749.e1984142460eb7e7dcbb.jpg",
+    "static/media/alyssa.JPG": "/React-Portfolio/static/media/alyssa.d7bf88915627ca306916.JPG",
+    "static/media/AlyssaNatividad_Resume.pdf": "/React-Portfolio/static/media/AlyssaNatividad_Resume.46532169a9ec39a6a673.pdf",
+    "index.html": "/React-Portfolio/index.html",
+    "main.6d08f3fc.css.map": "/React-Portfolio/static/css/main.6d08f3fc.css.map",
+    "main.d0a44f11.js.map": "/React-Portfolio/static/js/main.d0a44f11.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d08f3fc.css",
+    "static/js/main.d0a44f11.js"
+  ]
+}
