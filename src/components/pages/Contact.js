@@ -28,6 +28,8 @@ export default function Contact() {
       const inputType = e.target.name;
       const inputValue = e.target.value;
 
+      console.log(inputType);
+      console.log(inputValue);
       if (inputType === "email" && !validateEmail(inputValue)) {
         setErrorMessage("Email is invalid");
         return;
@@ -38,6 +40,7 @@ export default function Contact() {
         setErrorMessage("Message is required");
         return;
       }
+      setErrorMessage("");
     }
   };
   const handleFormSubmit = (e) => {
