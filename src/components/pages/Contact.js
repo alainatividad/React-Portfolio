@@ -1,44 +1,125 @@
-import React from "react";
+import React, { useState } from "react";
+import { validateEmail } from "../../utils/validateText";
 
 export default function Contact() {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleInputChange = (e) => {
+    // Getting the value and name of the input which triggered the change
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
+    // Based on the input type, we set the state of either email, username, and password
+    if (inputType === "email") {
+      setEmail(inputValue);
+    } else if (inputType === "name") {
+      setName(inputValue);
+    } else {
+      setMessage(inputValue);
+    }
+  };
+
+  const handleOnBlur = (e) => {
+    if (e.currentTarget !== e.target) {
+      const inputType = e.target.name;
+      const inputValue = e.target.value;
+
+      if (inputType === "email" && !validateEmail(inputValue)) {
+        setErrorMessage("Email is invalid");
+        return;
+      } else if (inputType === "name" && !inputValue.length) {
+        setErrorMessage("Please enter a name");
+        return;
+      } else if (inputType === "message" && !inputValue.length) {
+        setErrorMessage("Message is required");
+        return;
+      }
+    }
+  };
+  const handleFormSubmit = (e) => {
+    // Preventing refreshing the page
+    e.preventDefault();
+
+    // check and validate all fields
+    if (!validateEmail(email)) {
+      setErrorMessage("Email is invalid");
+      // We want to exit out of this code block if something is wrong so that the user can correct it
+      return;
+    }
+    if (name.length === 0) {
+      setErrorMessage("Please enter a name");
+      return;
+    }
+    if (message.length === 0) {
+      setErrorMessage("Message is required");
+      return;
+    }
+
+    // If everything goes according to plan, we want to clear out the input after a successful registration.
+    setName("");
+    setMessage("");
+    setEmail("");
+    setErrorMessage("");
+  };
+
   return (
     <div className="container col-md-6 mt-5 pt-3 animate__animated animate__fadeIn">
       <h2 className="mb-3 text-center">Contact Me!</h2>
-      <div className="mb-3">
-        <label htmlFor="validationDefault01" className="form-label">
+      <div className="mb-3" onBlur={handleOnBlur}>
+        <label htmlFor="formControlInput1" className="form-label">
           Name
         </label>
         <input
-          type="text"
+          value={name}
+          name="name"
+          onChange={handleInputChange}
           className="form-control"
-          id="validationDefault01"
-          required
+          id="formControlInput1"
         ></input>
       </div>
-      <div className="mb-3">
-        <label htmlFor="formControlInput1" className="form-label">
+      <div className="mb-3" onBlur={handleOnBlur}>
+        <label htmlFor="formControlInput2" className="form-label">
           Email address
         </label>
         <input
+          value={email}
           type="email"
+          name="email"
+          onChange={handleInputChange}
           className="form-control"
-          id="formControlInput1"
+          id="formControlInput2"
           placeholder="name@example.com"
         ></input>
       </div>
-      <div className="mb-3">
+      <div className="mb-3" onBlur={handleOnBlur}>
         <label htmlFor="formControlTextarea1" className="form-label">
           Message
         </label>
         <textarea
+          value={message}
+          type="message"
+          name="message"
           className="form-control"
           id="formControlTextarea1"
-          placeholder="Leave a message!"
+          onChange={handleInputChange}
           rows="5"
         ></textarea>
       </div>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
       <div className="col-12">
-        <button className="btn btn-primary" type="submit">
+        <button
+          className="btn btn-primary"
+          type="button"
+          onClick={handleFormSubmit}
+        >
           Submit
         </button>
       </div>
