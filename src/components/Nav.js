@@ -1,5 +1,8 @@
 import React from "react";
 
+// the nav component houses the links to the different pages of the web app so it would need to accept the destructured props
+// currentPage would define where the user is at within the page and would handle how the navigation links are shown
+// handlePageChange would be the function that would change the value of currentPage that would trigger the renderPage at the PortfolioContainer
 export default function Nav({ currentPage, handlePageChange }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark py-3">

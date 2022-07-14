@@ -1,3 +1,5 @@
+// store project details in an array of objects - this will be passed on to the portfolio (parent) component that will then pass it to the project (child) component
+// import the images that will be used in the portfolio component
 import img1 from "./img/pexels-ellie-burgin-12700791.jpg";
 import img2 from "./img/pexels-ellie-burgin-12250753.jpg";
 import img3 from "./img/pexels-ellie-burgin-12700792.jpg";

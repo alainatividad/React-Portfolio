@@ -1,6 +1,7 @@
 import React from "react";
 import img from "../../img/alyssa.JPG";
 
+// this component contains an image and a short description
 export default function About() {
   return (
     <div className="container mt-5 animate__animated animate__fadeIn">

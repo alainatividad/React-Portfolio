@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+// import the email validation checker
 import { validateEmail } from "../../utils/validateText";
 
 export default function Contact() {
+  // We're checking if the values entered on all the fields in the contact page are valid so we're using useStates for them. We also need useState for the error messages we'll be setting based on the validations done
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
+  // this event handler would store what is entered in the form
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { target } = e;
@@ -23,13 +26,15 @@ export default function Contact() {
     }
   };
 
+  // this event handler would check the entered value once the user clicks out of the form field and would show an error message if either the name or message is blank or if the email address is invalid
   const handleOnBlur = (e) => {
+    // checks if the user clicks out of the form field
     if (e.currentTarget !== e.target) {
+      // get the previous object that was clicked
       const inputType = e.target.name;
       const inputValue = e.target.value;
 
-      console.log(inputType);
-      console.log(inputValue);
+      // based on the input type, do the validation and set the error message if it applies
       if (inputType === "email" && !validateEmail(inputValue)) {
         setErrorMessage("Email is invalid");
         return;
@@ -40,9 +45,12 @@ export default function Contact() {
         setErrorMessage("Message is required");
         return;
       }
+      // otherwise, set the error message to blank
       setErrorMessage("");
     }
   };
+
+  // this event handler would perform checks after the user submits the form
   const handleFormSubmit = (e) => {
     // Preventing refreshing the page
     e.preventDefault();
@@ -62,7 +70,7 @@ export default function Contact() {
       return;
     }
 
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
+    // If everything goes according to plan, we want to clear out the input after a successful registration. The saving of the details entered is not done.
     setName("");
     setMessage("");
     setEmail("");
@@ -128,6 +136,7 @@ export default function Contact() {
       </div>
       <hr></hr>
 
+      {/* The email address and phone number is added at the bottom of the screen */}
       <div className="text-center">
         <a
           href="mailto:alyssatnatividad@gmail.com"

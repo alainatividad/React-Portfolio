@@ -1,6 +1,7 @@
 import React from "react";
 import Project from "../Project";
 
+// Portfolio component requires an array of projects that it would then map and pass on to the Project component
 export default function Portfolio({ projects }) {
   return (
     <div className="container col-12 mt-5 pt-3 animate__animated animate__fadeIn">

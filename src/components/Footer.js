@@ -1,13 +1,13 @@
 import React from "react";
 
+// for the footer, I decided to just add the links to my github and linkedin profiles. Both of their SVG's are added and are enclosed in an anchor that contains the links
 export default function Footer() {
   return (
     <footer className="mt-auto py-3 row justify-content-center">
       <a
         className="col-auto"
         href="https://www.github.com/alainatividad"
-        target="_blank"
-        rel="norefferer"
+        rel="noopener"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +23,7 @@ export default function Footer() {
       <a
         className="col-auto"
         href="https://www.linkedin.com/in/alyssa-natividad"
-        rel="norefferer"
-        target="_blank"
+        rel="noreferrer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
